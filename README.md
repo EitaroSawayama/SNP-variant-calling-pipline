@@ -34,7 +34,7 @@ do
     bowtie2 -x ref_name -1 "${file}_R1.fq.gz" -2 "${file}_R2.fq.gz" -S "${file}.sam"
 done
 
-# Remove multiple mapped reads.
+# Remove multiple mapped reads
 for file in $(<list.txt)
 do
     grep -v “XS:” "${file}.sam" > "${file}.unique.sam"

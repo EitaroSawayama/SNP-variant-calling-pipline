@@ -40,7 +40,7 @@ do
     grep -v “XS:” "${file}.sam" > "${file}.unique.sam"
 done
 
-# Sam/bam file convertion
+# Sam/bam file conversion
 for file in $(<list.txt)
 do
     samtools view -b "${file}.unique.sam" > "${file}.bam"
